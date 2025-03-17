@@ -4,6 +4,10 @@
 #include <dt-bindings/zmk/outputs.h>
 
 / {
+    chosen {
+        zmk,physical-layout = &foostan_corne_5col_layout;
+    }
+
     behaviors {
         lh_pht: lh_pht {
             compatible = "zmk,behavior-hold-tap";
