@@ -49,10 +49,10 @@
 
         Base {
             bindings = <
-  &kp SEMICOLON          &kp COMMA             &kp DOT              &kp P                &kp Y          &kp F      &kp G                &kp C                &kp R                 &kp L
-  &lh_balanced LSHIFT A  &lh_balanced LCTRL O  &lh_balanced LALT E  &lh_balanced LGUI U  &kp I          &kp D      &rh_balanced RGUI H  &rh_balanced LALT T  &rh_balanced RCTRL N  &rh_balanced RSHIFT S
-  &kp SINGLE_QUOTE       &kp Q                 &kp J                &kp K                &kp X          &kp B      &kp M                &kp W                &kp V                 &kp Z
-                                               &kp LG(SPACE)        &lt 1 TAB            &lt 2 SPACE    &lt 3 DEL  &kp RET              &kp ESC
+  &kp SEMICOLON          &kp COMMA             &kp DOT              &kp P                &kp Y          &kp F            &kp G                &kp C                &kp R                 &kp L
+  &lh_balanced LSHIFT A  &lh_balanced LCTRL O  &lh_balanced LALT E  &lh_balanced LGUI U  &kp I          &kp D            &rh_balanced RGUI H  &rh_balanced LALT T  &rh_balanced RCTRL N  &rh_balanced RSHIFT S
+  &kp SINGLE_QUOTE       &kp Q                 &kp J                &kp K                &kp X          &kp B            &kp M                &kp W                &kp V                 &kp Z
+                                               &kp LG(SPACE)        &lt 1 TAB            &lt 2 SPACE    &lt 3 BACKSPACE  &kp RET              &kp ESC
             >;
 
             label = "Base";
@@ -85,10 +85,10 @@
 
         Symbols {
             bindings = <
-  &kp PIPE       &kp BACKSLASH  &kp SLASH    &kp AMPS    &kp EQUAL       &trans  &trans  &trans  &trans  &trans
-  &kp TILDE      &kp CARET      &kp PERCENT  &kp DOLLAR  &kp UNDER       &trans  &trans  &trans  &trans  &trans
-  &kp RS(GRAVE)  &kp HASH       &kp AT       &kp EXCL    &kp QUESTION    &trans  &trans  &trans  &trans  &trans
-                                &trans       &trans      &trans          &trans  &trans  &trans
+  &kp PIPE   &kp BACKSLASH  &kp SLASH    &kp AMPS    &kp EQUAL       &trans  &trans  &trans  &trans  &trans
+  &kp TILDE  &kp CARET      &kp PERCENT  &kp DOLLAR  &kp UNDER       &trans  &trans  &trans  &trans  &trans
+  &kp GRAVE  &kp HASH       &kp AT       &kp EXCL    &kp QUESTION    &trans  &trans  &trans  &trans  &trans
+                            &trans       &trans      &trans          &trans  &trans  &trans
             >;
 
             label = "Symbl";
