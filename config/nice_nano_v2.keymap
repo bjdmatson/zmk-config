@@ -108,7 +108,7 @@
             >;
 
             label = "Dev";
-            display-same = "Dev";
+            display-name = "Dev";
         };
     };
 };
