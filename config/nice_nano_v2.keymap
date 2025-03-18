@@ -51,8 +51,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        Main {
-            display-name = "Base";
+        Base {
             bindings = <
   &kp SEMICOLON     &kp COMMA        &kp DOT         &kp P           &kp Y          &kp F      &kp G           &kp C           &kp R            &kp L
   &lh_pht LSHIFT A  &lh_pht LCTRL O  &lh_pht LALT E  &lh_pht LGUI U  &kp I          &kp D      &rh_pht RGUI H  &rh_pht LALT T  &rh_pht RCTRL N  &rh_pht RSHIFT S
@@ -61,6 +60,7 @@
             >;
 
             label = "Base";
+            display-name = "Base";
         };
 
         Numbers {
@@ -72,6 +72,7 @@
             >;
 
             label = "Nums";
+            display-name = "Numbers";
         };
 
         Navigation {
@@ -83,6 +84,7 @@
             >;
 
             label = "Nav";
+            display-name = "Nav";
         };
 
         Symbols {
@@ -94,6 +96,7 @@
             >;
 
             label = "Symbl";
+            display-name = "Symbl";
         };
 
         Device {
@@ -105,6 +108,7 @@
             >;
 
             label = "Dev";
+            display-same = "Dev";
         };
     };
 };
