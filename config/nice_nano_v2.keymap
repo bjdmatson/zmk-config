@@ -74,45 +74,6 @@
             mods = <(MOD_RSFT)>;
         };
 
-        lh_hyper_balanced: lh_hyper_balanced {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LH_HYPER_BALANCED";
-            bindings = <&hyper>, <&kp>;
-
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <200>;
-        };
-
-        rh_hyper_balanced: rh_hyper_balanced {
-            compatible = "zmk,behavior-hold-tap";
-            label = "RH_HYPER_BALANCED";
-            bindings = <&hyper>, <&kp>;
-
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <200>;
-        };
-
-        lh_meh_balanced: lh_meh_balanced {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LH_MEH_BALANCED";
-            bindings = <&meh>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "balanced";
-        };
-
-        rh_meh_balanced: rh_meh_balanced {
-            compatible = "zmk,behavior-hold-tap";
-            label = "RH_MEH_BALANCED";
-            bindings = <&meh>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-        };
-
         arrow_dance: arrow_dance {
             compatible = "zmk,behavior-tap-dance";
             label = "ARROW_DANCE";
@@ -134,7 +95,7 @@
         compatible = "zmk,combos";
 
         Sticky-Device {
-            bindings = <&sl 4>;
+            bindings = <&sl 5>;
             key-positions = <20 29>;
             layers = <5>;
         };
@@ -169,20 +130,6 @@
             label = "PAREN_CLOSE";
         };
 
-        hyper: hyper {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_SHIFT &kp LCTRL &kp LEFT_ALT &kp LEFT_COMMAND>;
-            label = "HYPER";
-        };
-
-        meh: meh {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_SHIFT &kp LEFT_CONTROL &kp LEFT_ALT>;
-            label = "MEH";
-        };
-
         dash_arrow: dash_arrow {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -203,10 +150,10 @@
 
         Base {
             bindings = <
-  &kp SEMICOLON          &kp COMMA             &kp DOT                 &kp P                &lh_meh_balanced 0 Y      &rh_meh_balanced 0 F    &kp G                &kp C                &kp R                 &kp L
-  &lh_balanced LSHIFT A  &lh_balanced LCTRL O  &lh_balanced LALT E     &lh_balanced LGUI U  &lh_hyper_balanced 0 I    &rh_hyper_balanced 0 D  &rh_balanced RGUI H  &rh_balanced LALT T  &rh_balanced RCTRL N  &rh_balanced RSHIFT S
-  &kp SINGLE_QUOTE       &kp Q                 &kp J                   &kp K                &kp X                     &kp B                   &kp M                &kp W                &kp V                 &kp Z
-                                               &mt LEFT_COMMAND GRAVE  &lt 1 TAB            &lt 2 SPACE               &lt 3 BACKSPACE         &kp RET              &lt 4 ESCAPE
+  &kp SEMICOLON          &kp COMMA             &kp DOT                 &kp P                &lh_balanced LA(LC(LEFT_SHIFT)) Y        &rh_balanced RA(RC(RIGHT_SHIFT)) F      &kp G                &kp C                &kp R                 &kp L
+  &lh_balanced LSHIFT A  &lh_balanced LCTRL O  &lh_balanced LALT E     &lh_balanced LGUI U  &lh_balanced LA(LC(LG(LEFT_SHIFT))) I    &rh_balanced RG(RA(RC(RIGHT_SHIFT))) D  &rh_balanced RGUI H  &rh_balanced LALT T  &rh_balanced RCTRL N  &rh_balanced RSHIFT S
+  &kp SINGLE_QUOTE       &kp Q                 &kp J                   &kp K                &kp X                                    &kp B                                   &kp M                &kp W                &kp V                 &kp Z
+                                               &mt LEFT_COMMAND GRAVE  &lt 1 TAB            &lt 2 SPACE                              &lt 3 BACKSPACE                         &kp RET              &lt 4 ESCAPE
             >;
 
             label = "Base";
