@@ -94,10 +94,9 @@
     combos {
         compatible = "zmk,combos";
 
-        Sticky-Device {
-            bindings = <&sl 5>;
-            key-positions = <20 29>;
-            layers = <5>;
+        device-combo {
+            bindings = <&mo 5>;
+            key-positions = <0 9>;
         };
     };
 
