@@ -95,8 +95,8 @@
         compatible = "zmk,combos";
 
         device-combo {
-            bindings = <&mo 5>;
-            key-positions = <0 9>;
+            bindings = <&sl 5>;
+            key-positions = <20 29>;
         };
     };
 
