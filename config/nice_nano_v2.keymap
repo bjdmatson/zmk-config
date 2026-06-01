@@ -89,6 +89,42 @@
             #binding-cells = <0>;
             mods = <(MOD_RSFT)>;
         };
+
+        sym_tags: sym_tags {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SYM_TAGS";
+            bindings = <&kp LESS_THAN>, <&kp GREATER_THAN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
+        };
+
+        sym_brackets: sym_brackets {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SYM_BRACKETS";
+            bindings = <&kp LEFT_BRACKET>, <&kp RIGHT_BRACKET>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
+        };
+
+        sym_braces: sym_braces {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SYM_BRACES";
+            bindings = <&kp LEFT_BRACE>, <&kp RIGHT_BRACE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
+        };
+
+        sym_parens: sym_parens {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SYM_PARENS";
+            bindings = <&kp LEFT_PARENTHESIS>, <&kp RIGHT_PARENTHESIS>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
+        };
     };
 
     combos {
@@ -101,34 +137,6 @@
     };
 
     macros {
-        brace_enclose: brace_enclose {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LBRC &kp RBRC &kp LEFT_ARROW>;
-            label = "BRACE_ENCLOSE";
-        };
-
-        bracket_close: bracket_close {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LBKT &kp RBKT &kp LEFT_ARROW>;
-            label = "BRACKET_CLOSE";
-        };
-
-        tag_close: tag_close {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LT &kp GT &kp LEFT_ARROW>;
-            label = "TAG_CLOSE";
-        };
-
-        paren_close: paren_close {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LPAR &kp RPAR &kp LEFT_ARROW>;
-            label = "PAREN_CLOSE";
-        };
-
         dash_arrow: dash_arrow {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -151,8 +159,8 @@
             bindings = <
   &kp SEMICOLON          &kp COMMA             &kp DOT                 &kp P                &lh_balanced LA(LC(LEFT_SHIFT)) Y        &rh_balanced RA(RC(RIGHT_SHIFT)) F      &kp G                &kp C                &kp R                 &kp L
   &lh_balanced LSHIFT A  &lh_balanced LCTRL O  &lh_balanced LALT E     &lh_balanced LGUI U  &lh_balanced LA(LC(LG(LEFT_SHIFT))) I    &rh_balanced RG(RA(RC(RIGHT_SHIFT))) D  &rh_balanced RGUI H  &rh_balanced LALT T  &rh_balanced RCTRL N  &rh_balanced RSHIFT S
-  &kp SINGLE_QUOTE       &kp Q                 &kp J                   &kp K                &kp X                                    &kp B                                   &kp M                &kp W                &kp V                 &kp Z
-                                               &mt LEFT_COMMAND GRAVE  &lt 1 TAB            &lt 2 SPACE                              &lt 3 BACKSPACE                         &kp RET              &lt 4 ESCAPE
+  &kp SINGLE_QUOTE       &kp Q                 &kp J                   &kp K                &kp X                                    &kp B                                   &kp M                &kp W                &kp V                 &lt 4 Z
+                                               &mt LEFT_COMMAND GRAVE  &lt 1 TAB            &lt 2 SPACE                              &lt 3 BACKSPACE                         &kp RET              &kp ESCAPE
             >;
 
             label = "Base";
@@ -185,10 +193,10 @@
 
         Symbols {
             bindings = <
-  &sym_pipe_hash  &sym_slash      &sym_perc_amp   &kp AT_SIGN   &kp EQUAL         &trans  &trans  &trans  &trans  &trans
-  &sym_tlde_tick  &kp CARET       &arrow_dance    &kp DOLLAR    &sym_dash         &trans  &trans  &trans  &trans  &trans
-  &tag_close      &bracket_close  &brace_enclose  &paren_close  &sym_qstn_excl    &trans  &trans  &trans  &trans  &trans
-                                  &trans          &trans        &trans            &trans  &trans  &trans
+  &sym_pipe_hash  &sym_slash     &sym_perc_amp  &kp AT_SIGN  &kp EQUAL         &trans  &trans  &trans  &trans  &trans
+  &sym_tlde_tick  &kp CARET      &arrow_dance   &kp DOLLAR   &sym_dash         &trans  &trans  &trans  &trans  &trans
+  &sym_tags       &sym_brackets  &sym_braces    &sym_parens  &sym_qstn_excl    &trans  &trans  &trans  &trans  &trans
+                                 &trans         &trans       &trans            &trans  &trans  &trans
             >;
 
             label = "Symbl";
@@ -207,7 +215,7 @@
             display-name = "Dev";
         };
 
-        Bluetooth {
+        BTooth {
             bindings = <
   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &trans  &trans  &trans
   &trans        &trans        &trans        &trans        &out OUT_TOG    &trans  &trans  &trans  &trans  &trans
