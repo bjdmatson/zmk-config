@@ -212,7 +212,7 @@
         Symbols {
             bindings = <
   &kp LEFT_BRACKET      &sym_slash  &sym_perc_amp  &kp RIGHT_BRACKET      &kp EQUAL       &kp RA(RC(RSHFT))     &trans    &trans    &trans     &trans
-  &kp LEFT_PARENTHESIS  &kp CARET   &arrow_dance   &kp RIGHT_PARENTHESIS  &kp MINUS       &kp RS(RA(RC(RGUI)))  &kp RGUI  &kp RALT  &kp RCTRL  &kp RSHIFT
+  &kp LEFT_PARENTHESIS  &kp PIPE    &arrow_dance   &kp RIGHT_PARENTHESIS  &kp MINUS       &kp RS(RA(RC(RGUI)))  &kp RGUI  &kp RALT  &kp RCTRL  &kp RSHIFT
   &sym_tlde_tick        &kp HASH    &kp AT_SIGN    &kp EXCLAMATION        &kp QUESTION    &trans                &trans    &trans    &trans     &trans
                                     &kp CARET      &kp ASTERISK           &kp DOLLAR      &trans                &trans    &trans
             >;
